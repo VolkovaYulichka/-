@@ -1,6 +1,5 @@
 #include <stdio.h>
-void main ()
-{
+int main(int argc, char *argv[]) {
   int t, i, num[4][4] ;
 	for(t=0; t<4; t++){
 		for(i=0;i<4;i++){
