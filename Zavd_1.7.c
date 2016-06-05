@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 	
 	for(t = 0; t < 9; t++){
 		for(i = 0; i < 9; i++)
-		printf("%3d", mas[t][i]);
+		printf("%2d", mas[t][i]);
 		printf("\n");
 	}	
 	
