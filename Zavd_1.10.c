@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define SIZE 9
 
 int main(int argc, char *argv[]) {
-	int mas[9][9], i, j;
-		for(i = 0; i < 9; i++) {
-		for( j = 0; j < 9; j++){
-			if(j <= 9 -i) 
-				mas[i][j] = 0;
-				else
-					mas[i][j] = 1;
+	int mas[SIZE][SIZE], i, j;
+	for(i = 0; i < SIZE; i++){
+		for ( j = 0; j < SIZE; j++){
+			if(i >= SIZE - j)
+			mas[i][j] = 1;
+			else
+			mas[i][j] = 0;
 		}
 	}
-	for(i = 0; i < 9; i++) {
-			for(j = 0; j < 9; j++)
-			printf(" %d", mas[i][j]);
-			printf("\n");
+
+	
+	for(i = 0; i < SIZE; i++){
+		for(j = 0; j < SIZE; j++)
+		printf("%3d", mas[i][j]);
+		printf("\n");
 	}
 	system("pause");
-	return 0;		
+	return 0;
 }
