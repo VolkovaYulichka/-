@@ -1,17 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 int main(int argc, char *argv[]) {
-  int t, i, num[4][4] ;
-	for(t=0; t<4; t++){
-		for(i=0;i<4;i++){
-		num[t][i] = 1;
-		num [i][t]=(t*i)*0;
+	int mas[9][9], i, j;
+		for(i = 0; i < 9; i++) {
+		for( j = 0; j < 9; j++){
+			if(i <= j ) 
+				mas[i][j] = 0;
+				else
+					mas[i][j] = 1;
 		}
-  
 	}
-  
-	for(t=0; t<4; t++){
-		for(i=0; i<4; i++)
-		printf("%3d ", num[t][i]);
-		printf("\n");
+	for(i = 0; i < 9; i++) {
+			for(j = 0; j < 9; j++)
+			printf(" %d", mas[i][j]);
+			printf("\n");
 	}
+	system("pause");
+	return 0;		
 }
